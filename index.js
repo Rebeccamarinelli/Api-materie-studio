@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Una rotta di esempio: GET /users
 app.get('/', (req, res) => {
-    res.json(materie);
+    res.send(`<h1>benvenuto nell api materie  https://apimaterie.render.com/api/materie</h1> `);
   });
 
 app.get('/api/materie', (req, res) => {
