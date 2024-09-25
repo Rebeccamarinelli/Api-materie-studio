@@ -9,12 +9,9 @@ app.use(express.json());
 
 // Una rotta di esempio: GET /users
 app.get('/', (req, res) => {
-    res.send(`<h1>benvenuto nell api materie  https://apimaterie.render.com/api/materie</h1> `);
+    res.json(materie);
   });
 
-app.get('/api/materie', (req, res) => {
-  res.json(materie);
-});
 
 // Avvio del server
 app.listen(process.env.PORT || port, () => {
