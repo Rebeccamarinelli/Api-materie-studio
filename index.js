@@ -17,6 +17,6 @@ app.get('/api/materie', (req, res) => {
 });
 
 // Avvio del server
-app.listen(process.env.PORT || port, () => {
+app.listen('https://apimaterie.onrender.com' || port, () => {
   console.log(`API ascolta su http://localhost:${port}`);
 });
