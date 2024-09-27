@@ -5,9 +5,6 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// Middleware per gestire le richieste JSON
-app.use(express.json());
-
 const corsOptions = {
   origin: 'http://localhost:4200', // Specifica l'origine permessa (es: il tuo frontend)
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Metodi permessi
@@ -17,6 +14,11 @@ const corsOptions = {
 
 // Usa il middleware CORS con le opzioni specificate
 app.use(cors(corsOptions));
+
+// Middleware per gestire le richieste JSON
+app.use(express.json());
+
+
 
 
 // Una rotta di esempio: GET /users
